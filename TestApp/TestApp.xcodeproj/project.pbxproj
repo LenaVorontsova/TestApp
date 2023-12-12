@@ -12,6 +12,14 @@
 		F238140D2B28761900EB4DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F238140C2B28761900EB4DF4 /* Assets.xcassets */; };
 		F23814102B28761900EB4DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F238140E2B28761900EB4DF4 /* LaunchScreen.storyboard */; };
 		F23814192B28770300EB4DF4 /* StartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814182B28770300EB4DF4 /* StartService.swift */; };
+		F238141D2B2877D600EB4DF4 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238141C2B2877D600EB4DF4 /* MainScreenView.swift */; };
+		F238141F2B2877E100EB4DF4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238141E2B2877E100EB4DF4 /* MainScreenViewController.swift */; };
+		F23814212B2877E900EB4DF4 /* MainScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814202B2877E900EB4DF4 /* MainScreenDelegate.swift */; };
+		F23814292B2878E200EB4DF4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F23814282B2878E200EB4DF4 /* SnapKit */; };
+		F238142B2B2878E200EB4DF4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F238142A2B2878E200EB4DF4 /* SnapKit-Dynamic */; };
+		F238142E2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F238142D2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf */; };
+		F23814302B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F238142F2B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf */; };
+		F23814322B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,12 @@
 		F238140F2B28761900EB4DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F23814112B28761900EB4DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F23814182B28770300EB4DF4 /* StartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartService.swift; sourceTree = "<group>"; };
+		F238141C2B2877D600EB4DF4 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		F238141E2B2877E100EB4DF4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F23814202B2877E900EB4DF4 /* MainScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenDelegate.swift; sourceTree = "<group>"; };
+		F238142D2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display Regular.ttf"; sourceTree = "<group>"; };
+		F238142F2B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.ttf"; sourceTree = "<group>"; };
+		F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23814292B2878E200EB4DF4 /* SnapKit in Frameworks */,
+				F238142B2B2878E200EB4DF4 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +70,7 @@
 		F23814022B28761700EB4DF4 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F238142C2B28795900EB4DF4 /* Fonts */,
 				F238141A2B28773F00EB4DF4 /* Modules */,
 				F23814172B2876E300EB4DF4 /* Services */,
 				F23814032B28761700EB4DF4 /* AppDelegate.swift */,
@@ -75,9 +92,30 @@
 		F238141A2B28773F00EB4DF4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F238141B2B2877C900EB4DF4 /* MainScreen */,
 				F23814072B28761700EB4DF4 /* ViewController.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		F238141B2B2877C900EB4DF4 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F238141C2B2877D600EB4DF4 /* MainScreenView.swift */,
+				F238141E2B2877E100EB4DF4 /* MainScreenViewController.swift */,
+				F23814202B2877E900EB4DF4 /* MainScreenDelegate.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F238142C2B28795900EB4DF4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F238142F2B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf */,
+				F238142D2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf */,
+				F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +134,10 @@
 			dependencies = (
 			);
 			name = TestApp;
+			packageProductDependencies = (
+				F23814282B2878E200EB4DF4 /* SnapKit */,
+				F238142A2B2878E200EB4DF4 /* SnapKit-Dynamic */,
+			);
 			productName = TestApp;
 			productReference = F23814002B28761700EB4DF4 /* TestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +166,9 @@
 				Base,
 			);
 			mainGroup = F23813F72B28761700EB4DF4;
+			packageReferences = (
+				F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F23814012B28761700EB4DF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F23814102B28761900EB4DF4 /* LaunchScreen.storyboard in Resources */,
+				F23814302B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf in Resources */,
+				F23814322B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf in Resources */,
+				F238142E2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf in Resources */,
 				F238140D2B28761900EB4DF4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F238141F2B2877E100EB4DF4 /* MainScreenViewController.swift in Sources */,
+				F23814212B2877E900EB4DF4 /* MainScreenDelegate.swift in Sources */,
 				F23814192B28770300EB4DF4 /* StartService.swift in Sources */,
 				F23814082B28761700EB4DF4 /* ViewController.swift in Sources */,
 				F23814042B28761700EB4DF4 /* AppDelegate.swift in Sources */,
+				F238141D2B2877D600EB4DF4 /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +422,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F23814282B2878E200EB4DF4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F238142A2B2878E200EB4DF4 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F23813F82B28761700EB4DF4 /* Project object */;
 }
