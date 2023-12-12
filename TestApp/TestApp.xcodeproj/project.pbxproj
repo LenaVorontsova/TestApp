@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F23814042B28761700EB4DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814032B28761700EB4DF4 /* AppDelegate.swift */; };
-		F23814082B28761700EB4DF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814072B28761700EB4DF4 /* ViewController.swift */; };
 		F238140D2B28761900EB4DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F238140C2B28761900EB4DF4 /* Assets.xcassets */; };
 		F23814102B28761900EB4DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F238140E2B28761900EB4DF4 /* LaunchScreen.storyboard */; };
 		F23814192B28770300EB4DF4 /* StartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814182B28770300EB4DF4 /* StartService.swift */; };
@@ -20,12 +19,14 @@
 		F238142E2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F238142D2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf */; };
 		F23814302B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F238142F2B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf */; };
 		F23814322B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */; };
+		F23814362B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */; };
+		F23814392B28ACE000EB4DF4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814382B28ACE000EB4DF4 /* View.swift */; };
+		F238143B2B28ACFD00EB4DF4 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F23814002B28761700EB4DF4 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23814032B28761700EB4DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F23814072B28761700EB4DF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F238140C2B28761900EB4DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F238140F2B28761900EB4DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F23814112B28761900EB4DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		F238142D2B2883FC00EB4DF4 /* SF Pro Display Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display Regular.ttf"; sourceTree = "<group>"; };
 		F238142F2B28840800EB4DF4 /* SF-Pro-Display-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.ttf"; sourceTree = "<group>"; };
 		F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoSectionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F23814382B28ACE000EB4DF4 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		F23814022B28761700EB4DF4 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F23814372B28ACC500EB4DF4 /* Extensions */,
 				F238142C2B28795900EB4DF4 /* Fonts */,
 				F238141A2B28773F00EB4DF4 /* Modules */,
 				F23814172B2876E300EB4DF4 /* Services */,
@@ -93,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				F238141B2B2877C900EB4DF4 /* MainScreen */,
-				F23814072B28761700EB4DF4 /* ViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -101,6 +105,7 @@
 		F238141B2B2877C900EB4DF4 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F23814332B28ACA100EB4DF4 /* Cell */,
 				F238141C2B2877D600EB4DF4 /* MainScreenView.swift */,
 				F238141E2B2877E100EB4DF4 /* MainScreenViewController.swift */,
 				F23814202B2877E900EB4DF4 /* MainScreenDelegate.swift */,
@@ -116,6 +121,31 @@
 				F23814312B28841000EB4DF4 /* FontsFree-Net-SFProDisplay-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F23814332B28ACA100EB4DF4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F23814342B28ACA800EB4DF4 /* Collection */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F23814342B28ACA800EB4DF4 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		F23814372B28ACC500EB4DF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F23814382B28ACE000EB4DF4 /* View.swift */,
+				F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +231,10 @@
 				F238141F2B2877E100EB4DF4 /* MainScreenViewController.swift in Sources */,
 				F23814212B2877E900EB4DF4 /* MainScreenDelegate.swift in Sources */,
 				F23814192B28770300EB4DF4 /* StartService.swift in Sources */,
-				F23814082B28761700EB4DF4 /* ViewController.swift in Sources */,
 				F23814042B28761700EB4DF4 /* AppDelegate.swift in Sources */,
+				F23814362B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift in Sources */,
+				F23814392B28ACE000EB4DF4 /* View.swift in Sources */,
+				F238143B2B28ACFD00EB4DF4 /* CollectionView.swift in Sources */,
 				F238141D2B2877D600EB4DF4 /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

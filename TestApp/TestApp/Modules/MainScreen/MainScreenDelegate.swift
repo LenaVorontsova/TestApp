@@ -8,5 +8,7 @@
 import UIKit
 
 protocol MainScreenDelegate: AnyObject {
-    
+    func menuButtonTapped(_ sender: UIButton)
+    func moreButtonTapped(_ sender: UIButton)
+    func heartButtonTapped(_ sender: UIButton)
 }
