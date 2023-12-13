@@ -22,6 +22,10 @@
 		F23814362B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */; };
 		F23814392B28ACE000EB4DF4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814382B28ACE000EB4DF4 /* View.swift */; };
 		F238143B2B28ACFD00EB4DF4 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */; };
+		F238143F2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238143E2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift */; };
+		F23814412B296ADF00EB4DF4 /* StocksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814402B296ADF00EB4DF4 /* StocksCollectionViewCell.swift */; };
+		F23814442B296B6100EB4DF4 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814432B296B6100EB4DF4 /* StockData.swift */; };
+		F23814462B2A263600EB4DF4 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814452B2A263600EB4DF4 /* CatalogCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoSectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F23814382B28ACE000EB4DF4 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		F238143E2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoBannersCollectionViewCell.swift; sourceTree = "<group>"; };
+		F23814402B296ADF00EB4DF4 /* StocksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksCollectionViewCell.swift; sourceTree = "<group>"; };
+		F23814432B296B6100EB4DF4 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockData.swift; sourceTree = "<group>"; };
+		F23814452B2A263600EB4DF4 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		F23814022B28761700EB4DF4 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F23814422B296B5400EB4DF4 /* Models */,
 				F23814372B28ACC500EB4DF4 /* Extensions */,
 				F238142C2B28795900EB4DF4 /* Fonts */,
 				F238141A2B28773F00EB4DF4 /* Modules */,
@@ -135,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				F23814352B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift */,
+				F238143E2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift */,
+				F23814402B296ADF00EB4DF4 /* StocksCollectionViewCell.swift */,
+				F23814452B2A263600EB4DF4 /* CatalogCollectionViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -146,6 +158,14 @@
 				F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F23814422B296B5400EB4DF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F23814432B296B6100EB4DF4 /* StockData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +252,12 @@
 				F23814212B2877E900EB4DF4 /* MainScreenDelegate.swift in Sources */,
 				F23814192B28770300EB4DF4 /* StartService.swift in Sources */,
 				F23814042B28761700EB4DF4 /* AppDelegate.swift in Sources */,
+				F23814462B2A263600EB4DF4 /* CatalogCollectionViewCell.swift in Sources */,
 				F23814362B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift in Sources */,
 				F23814392B28ACE000EB4DF4 /* View.swift in Sources */,
+				F238143F2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift in Sources */,
+				F23814412B296ADF00EB4DF4 /* StocksCollectionViewCell.swift in Sources */,
+				F23814442B296B6100EB4DF4 /* StockData.swift in Sources */,
 				F238143B2B28ACFD00EB4DF4 /* CollectionView.swift in Sources */,
 				F238141D2B2877D600EB4DF4 /* MainScreenView.swift in Sources */,
 			);

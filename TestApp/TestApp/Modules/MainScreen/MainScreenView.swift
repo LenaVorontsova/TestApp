@@ -83,6 +83,88 @@ final class MainScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    public lazy var promoSectionsCollectionView: ContentSizedCollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .horizontal
+        let collectionView = ContentSizedCollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        
+        collectionView.register(cell: PromoSectionsCollectionViewCell.self)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    public lazy var promoBannersCollectionView: ContentSizedCollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .horizontal
+        let collectionView = ContentSizedCollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        
+        collectionView.register(cell: PromoBannersCollectionViewCell.self)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    public lazy var stocksLabel: UILabel = {
+        let view = UILabel(frame: .zero)
+        view.font = UIFont(name: "SFProDisplay-Regular", size: 25)
+        view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        view.textAlignment = .left
+        view.text = "Акции"
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    private lazy var showAllButton: UIButton = {
+        let view = UIButton(frame: .zero)
+        view.setImage(UIImage(named: "showAllButtonImage"), for: .normal)
+        
+        view.addTarget(self, action: #selector(showAllButtonTapped), for: .touchUpInside)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    public lazy var stocksCollectionView: ContentSizedCollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .horizontal
+        let collectionView = ContentSizedCollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        
+        collectionView.register(cell: StocksCollectionViewCell.self)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    public lazy var catalogLabel: UILabel = {
+        let view = UILabel(frame: .zero)
+        view.font = UIFont(name: "SFProDisplay-Regular", size: 25)
+        view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        view.textAlignment = .left
+        view.text = "Каталог"
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    public lazy var catalogCollectionView: ContentSizedCollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .vertical
+        let collectionView = ContentSizedCollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        
+        collectionView.register(cell: CatalogCollectionViewCell.self)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
     
     weak var delegate: MainScreenDelegate?
     
@@ -107,6 +189,13 @@ final class MainScreenView: UIView {
         self.containerView.addSubview(self.moreButton)
         self.containerView.addSubview(self.searchView)
         self.containerView.addSubview(self.heartButton)
+        self.containerView.addSubview(self.promoSectionsCollectionView)
+        self.containerView.addSubview(self.promoBannersCollectionView)
+        self.containerView.addSubview(self.stocksLabel)
+        self.containerView.addSubview(self.showAllButton)
+        self.containerView.addSubview(self.stocksCollectionView)
+        self.containerView.addSubview(self.catalogLabel)
+        self.containerView.addSubview(self.catalogCollectionView)
         
         self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
@@ -149,7 +238,42 @@ final class MainScreenView: UIView {
             $0.bottom.equalTo(self.searchView.snp.bottom).offset(-2)
             $0.height.width.equalTo(30)
         })
-
+        self.promoSectionsCollectionView.snp.makeConstraints({
+            $0.top.equalTo(self.searchView.snp.bottom).offset(22)
+            $0.leading.equalTo(self.containerView.snp.leading)
+            $0.trailing.equalTo(self.containerView.snp.trailing)
+            $0.height.equalTo(88)
+        })
+        self.promoBannersCollectionView.snp.makeConstraints({
+            $0.top.equalTo(self.promoSectionsCollectionView.snp.bottom).offset(30)
+            $0.leading.equalTo(self.containerView.snp.leading)
+            $0.trailing.equalTo(self.containerView.snp.trailing)
+            $0.height.equalTo(115)
+        })
+        self.stocksLabel.snp.makeConstraints({
+            $0.top.equalTo(self.promoBannersCollectionView.snp.bottom).offset(30)
+            $0.leading.equalTo(self.containerView.snp.leading).offset(15)
+        })
+        self.showAllButton.snp.makeConstraints({
+            $0.top.equalTo(self.promoBannersCollectionView.snp.bottom).offset(30)
+            $0.trailing.equalTo(self.containerView.snp.trailing).offset(-15)
+        })
+        self.stocksCollectionView.snp.makeConstraints({
+            $0.top.equalTo(self.stocksLabel.snp.bottom).offset(20)
+            $0.leading.equalTo(self.containerView.snp.leading)
+            $0.trailing.equalTo(self.containerView.snp.trailing)
+            $0.height.equalTo(208)
+        })
+        self.catalogLabel.snp.makeConstraints({
+            $0.top.equalTo(self.stocksCollectionView.snp.bottom).offset(30)
+            $0.leading.equalTo(self.containerView.snp.leading).offset(15)
+        })
+        self.catalogCollectionView.snp.makeConstraints({
+            $0.top.equalTo(self.catalogLabel.snp.bottom).offset(20)
+            $0.leading.equalTo(self.containerView.snp.leading).offset(15)
+            $0.trailing.equalTo(self.containerView.snp.trailing).offset(-15)
+            $0.bottom.equalTo(self.containerView.snp.bottom).offset(-30)
+        })
     }
     
     @objc
@@ -165,5 +289,10 @@ final class MainScreenView: UIView {
     @objc
     func heartButtonTapped(_ sender: UIButton) {
         self.delegate?.heartButtonTapped(sender)
+    }
+    
+    @objc
+    func showAllButtonTapped(_ sender: UIButton) {
+        self.delegate?.showAllButtonTapped(sender)
     }
 }
