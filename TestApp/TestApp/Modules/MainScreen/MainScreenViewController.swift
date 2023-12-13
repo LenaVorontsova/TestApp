@@ -190,7 +190,9 @@ final class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: MainScreenDelegate {
     func menuButtonTapped(_ sender: UIButton) {
-        
+        let vc = MenuViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
     }
     
     func moreButtonTapped(_ sender: UIButton) {
