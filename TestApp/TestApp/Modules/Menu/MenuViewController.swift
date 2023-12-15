@@ -30,15 +30,18 @@ final class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.mainView.menuTableView.delegate = self
         self.mainView.menuTableView.dataSource = self
         
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.swipedLeft))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.swipedLeft))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.mainView.addGestureRecognizer(swipeLeft)
     }
     
-    @objc 
+    
+    
+    @objc
     func swipedLeft(gesture: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.8) {
             self.dismiss(animated: false)

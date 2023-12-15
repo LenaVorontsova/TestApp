@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class MainScreenView: UIView {
-    private lazy var scrollView: UIScrollView = {
+    public lazy var scrollView: UIScrollView = {
         let view = UIScrollView(frame: .zero)
         view.backgroundColor = .clear
         view.contentInsetAdjustmentBehavior = .automatic
@@ -23,6 +23,7 @@ final class MainScreenView: UIView {
     }()
     public lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         return view
@@ -32,6 +33,17 @@ final class MainScreenView: UIView {
         view.setImage(UIImage(named: "menuButtonImage"), for: .normal)
         
         view.addTarget(self, action: #selector(menuButtonTapped), for: .touchUpInside)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    public lazy var addressView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .clear
+        view.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(searchAddressTapped))
+        view.addGestureRecognizer(tap)
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -58,12 +70,12 @@ final class MainScreenView: UIView {
     private lazy var moreButton: UIButton = {
         let view = UIButton(frame: .zero)
         view.setImage(UIImage(named: "moreButtonImage"), for: .normal)
+        view.isUserInteractionEnabled = false
         
-        view.addTarget(self, action: #selector(moreButtonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private lazy var searchView: UISearchBar = {
+    public lazy var searchView: UISearchBar = {
         let view = UISearchBar(frame: .zero)
         view.placeholder = "Поиск товаров"
         view.layer.borderWidth = 1
@@ -184,9 +196,10 @@ final class MainScreenView: UIView {
         self.addSubview(self.scrollView)
         self.scrollView.addSubview(self.containerView)
         self.containerView.addSubview(self.menuButton)
-        self.containerView.addSubview(self.deliveryLabel)
-        self.containerView.addSubview(self.addressLabel)
-        self.containerView.addSubview(self.moreButton)
+        self.containerView.addSubview(self.addressView)
+        self.addressView.addSubview(self.deliveryLabel)
+        self.addressView.addSubview(self.addressLabel)
+        self.addressView.addSubview(self.moreButton)
         self.containerView.addSubview(self.searchView)
         self.containerView.addSubview(self.heartButton)
         self.containerView.addSubview(self.promoSectionsCollectionView)
@@ -213,13 +226,20 @@ final class MainScreenView: UIView {
             $0.leading.equalTo(self.containerView.snp.leading).offset(16)
             $0.width.height.equalTo(25)
         })
-        self.deliveryLabel.snp.makeConstraints({
+        self.addressView.snp.makeConstraints({
             $0.top.equalTo(self.containerView.snp.top).inset(27)
             $0.leading.equalTo(self.menuButton.snp.trailing).offset(25)
+            $0.trailing.equalTo(self.containerView.snp.trailing).offset(-15)
+            $0.bottom.equalTo(self.addressLabel.safeAreaLayoutGuide.snp.bottom)
+        })
+        self.deliveryLabel.snp.makeConstraints({
+            $0.top.equalTo(self.addressView.snp.top)
+            $0.leading.equalTo(self.addressView.snp.leading)
+            $0.trailing.equalTo(self.addressView.snp.trailing)
         })
         self.addressLabel.snp.makeConstraints({
             $0.top.equalTo(self.deliveryLabel.snp.bottom)
-            $0.leading.equalTo(self.menuButton.snp.trailing).offset(25)
+            $0.leading.equalTo(self.addressView.snp.leading)
         })
         self.moreButton.snp.makeConstraints({
             $0.centerY.equalTo(self.addressLabel.snp.centerY)
@@ -227,7 +247,7 @@ final class MainScreenView: UIView {
             $0.width.height.equalTo(12)
         })
         self.searchView.snp.makeConstraints({
-            $0.top.equalTo(self.addressLabel.snp.bottom).offset(16)
+            $0.top.equalTo(self.addressView.snp.bottom).offset(16)
             $0.leading.equalTo(self.containerView.snp.leading).offset(15)
             $0.height.equalTo(35)
         })
@@ -282,8 +302,8 @@ final class MainScreenView: UIView {
     }
     
     @objc
-    func moreButtonTapped(_ sender: UIButton) {
-        self.delegate?.moreButtonTapped(sender)
+    func searchAddressTapped(_ tapGesture: UITapGestureRecognizer) {
+        self.delegate?.searchAddressTapped(tapGesture)
     }
     
     @objc

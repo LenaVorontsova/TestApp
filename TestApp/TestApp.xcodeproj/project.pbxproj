@@ -31,6 +31,21 @@
 		F238144D2B2A34F200EB4DF4 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238144C2B2A34F200EB4DF4 /* MenuDelegate.swift */; };
 		F23814512B2A3AEB00EB4DF4 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814502B2A3AEB00EB4DF4 /* TableView.swift */; };
 		F23814552B2A3B4800EB4DF4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814542B2A3B4800EB4DF4 /* MenuTableViewCell.swift */; };
+		F23814582B2A43FE00EB4DF4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814572B2A43FE00EB4DF4 /* SearchView.swift */; };
+		F238145A2B2A440700EB4DF4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814592B2A440700EB4DF4 /* SearchViewController.swift */; };
+		F238145C2B2A440D00EB4DF4 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238145B2B2A440D00EB4DF4 /* SearchDelegate.swift */; };
+		F23814602B2A449100EB4DF4 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238145F2B2A449100EB4DF4 /* LocationTableViewCell.swift */; };
+		F23814652B2A4EE000EB4DF4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F23814642B2A4EE000EB4DF4 /* Alamofire */; };
+		F238148F2B2BB5B700EB4DF4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238148E2B2BB5B700EB4DF4 /* NetworkManager.swift */; };
+		F23814912B2BB66E00EB4DF4 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814902B2BB66E00EB4DF4 /* Application.swift */; };
+		F23814932B2BB67500EB4DF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814922B2BB67500EB4DF4 /* AlertController.swift */; };
+		F23814952B2BB67C00EB4DF4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814942B2BB67C00EB4DF4 /* Alert.swift */; };
+		F23814972B2BB68300EB4DF4 /* InternetAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814962B2BB68300EB4DF4 /* InternetAvailability.swift */; };
+		F23814992B2BB6B600EB4DF4 /* NetworkSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814982B2BB6B600EB4DF4 /* NetworkSupport.swift */; };
+		F238149B2B2BB6BE00EB4DF4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238149A2B2BB6BE00EB4DF4 /* Request.swift */; };
+		F238149D2B2BB6C800EB4DF4 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238149C2B2BB6C800EB4DF4 /* AlertService.swift */; };
+		F238149F2B2BC1C900EB4DF4 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238149E2B2BC1C900EB4DF4 /* AddressData.swift */; };
+		F23814A12B2BDE3F00EB4DF4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23814A02B2BDE3F00EB4DF4 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +73,20 @@
 		F238144C2B2A34F200EB4DF4 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
 		F23814502B2A3AEB00EB4DF4 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		F23814542B2A3B4800EB4DF4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F23814572B2A43FE00EB4DF4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F23814592B2A440700EB4DF4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F238145B2B2A440D00EB4DF4 /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
+		F238145F2B2A449100EB4DF4 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		F238148E2B2BB5B700EB4DF4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F23814902B2BB66E00EB4DF4 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		F23814922B2BB67500EB4DF4 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		F23814942B2BB67C00EB4DF4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F23814962B2BB68300EB4DF4 /* InternetAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailability.swift; sourceTree = "<group>"; };
+		F23814982B2BB6B600EB4DF4 /* NetworkSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupport.swift; sourceTree = "<group>"; };
+		F238149A2B2BB6BE00EB4DF4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F238149C2B2BB6C800EB4DF4 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		F238149E2B2BC1C900EB4DF4 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
+		F23814A02B2BDE3F00EB4DF4 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23814652B2A4EE000EB4DF4 /* Alamofire in Frameworks */,
 				F23814292B2878E200EB4DF4 /* SnapKit in Frameworks */,
 				F238142B2B2878E200EB4DF4 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -108,7 +138,9 @@
 		F23814172B2876E300EB4DF4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F23814662B2A559A00EB4DF4 /* Network */,
 				F23814182B28770300EB4DF4 /* StartService.swift */,
+				F238149C2B2BB6C800EB4DF4 /* AlertService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -116,6 +148,7 @@
 		F238141A2B28773F00EB4DF4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F23814562B2A43A300EB4DF4 /* Search */,
 				F23814472B2A34D500EB4DF4 /* Menu */,
 				F238141B2B2877C900EB4DF4 /* MainScreen */,
 			);
@@ -168,6 +201,11 @@
 				F23814382B28ACE000EB4DF4 /* View.swift */,
 				F238143A2B28ACFD00EB4DF4 /* CollectionView.swift */,
 				F23814502B2A3AEB00EB4DF4 /* TableView.swift */,
+				F23814902B2BB66E00EB4DF4 /* Application.swift */,
+				F23814922B2BB67500EB4DF4 /* AlertController.swift */,
+				F23814942B2BB67C00EB4DF4 /* Alert.swift */,
+				F23814962B2BB68300EB4DF4 /* InternetAvailability.swift */,
+				F23814A02B2BDE3F00EB4DF4 /* TextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +213,7 @@
 		F23814422B296B5400EB4DF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F23814752B2A565100EB4DF4 /* Network */,
 				F23814432B296B6100EB4DF4 /* StockData.swift */,
 			);
 			path = Models;
@@ -207,6 +246,51 @@
 			path = Table;
 			sourceTree = "<group>";
 		};
+		F23814562B2A43A300EB4DF4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F238145D2B2A447300EB4DF4 /* Cell */,
+				F23814572B2A43FE00EB4DF4 /* SearchView.swift */,
+				F23814592B2A440700EB4DF4 /* SearchViewController.swift */,
+				F238145B2B2A440D00EB4DF4 /* SearchDelegate.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F238145D2B2A447300EB4DF4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F238145E2B2A447E00EB4DF4 /* Table */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F238145E2B2A447E00EB4DF4 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				F238145F2B2A449100EB4DF4 /* LocationTableViewCell.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		F23814662B2A559A00EB4DF4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F238148E2B2BB5B700EB4DF4 /* NetworkManager.swift */,
+				F23814982B2BB6B600EB4DF4 /* NetworkSupport.swift */,
+				F238149A2B2BB6BE00EB4DF4 /* Request.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F23814752B2A565100EB4DF4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F238149E2B2BC1C900EB4DF4 /* AddressData.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +310,7 @@
 			packageProductDependencies = (
 				F23814282B2878E200EB4DF4 /* SnapKit */,
 				F238142A2B2878E200EB4DF4 /* SnapKit-Dynamic */,
+				F23814642B2A4EE000EB4DF4 /* Alamofire */,
 			);
 			productName = TestApp;
 			productReference = F23814002B28761700EB4DF4 /* TestApp.app */;
@@ -257,6 +342,7 @@
 			mainGroup = F23813F72B28761700EB4DF4;
 			packageReferences = (
 				F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F23814632B2A4EE000EB4DF4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = F23814012B28761700EB4DF4 /* Products */;
 			projectDirPath = "";
@@ -287,22 +373,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23814912B2BB66E00EB4DF4 /* Application.swift in Sources */,
+				F238148F2B2BB5B700EB4DF4 /* NetworkManager.swift in Sources */,
 				F238141F2B2877E100EB4DF4 /* MainScreenViewController.swift in Sources */,
 				F23814212B2877E900EB4DF4 /* MainScreenDelegate.swift in Sources */,
+				F238149D2B2BB6C800EB4DF4 /* AlertService.swift in Sources */,
 				F23814192B28770300EB4DF4 /* StartService.swift in Sources */,
 				F238144B2B2A34EB00EB4DF4 /* MenuViewController.swift in Sources */,
+				F238149B2B2BB6BE00EB4DF4 /* Request.swift in Sources */,
+				F238145A2B2A440700EB4DF4 /* SearchViewController.swift in Sources */,
 				F23814042B28761700EB4DF4 /* AppDelegate.swift in Sources */,
 				F23814552B2A3B4800EB4DF4 /* MenuTableViewCell.swift in Sources */,
 				F23814462B2A263600EB4DF4 /* CatalogCollectionViewCell.swift in Sources */,
 				F23814362B28ACBD00EB4DF4 /* PromoSectionsCollectionViewCell.swift in Sources */,
+				F23814932B2BB67500EB4DF4 /* AlertController.swift in Sources */,
 				F23814392B28ACE000EB4DF4 /* View.swift in Sources */,
 				F23814492B2A34DF00EB4DF4 /* MenuView.swift in Sources */,
+				F23814992B2BB6B600EB4DF4 /* NetworkSupport.swift in Sources */,
+				F23814582B2A43FE00EB4DF4 /* SearchView.swift in Sources */,
+				F238145C2B2A440D00EB4DF4 /* SearchDelegate.swift in Sources */,
+				F23814A12B2BDE3F00EB4DF4 /* TextField.swift in Sources */,
 				F238143F2B28EA7F00EB4DF4 /* PromoBannersCollectionViewCell.swift in Sources */,
 				F23814412B296ADF00EB4DF4 /* StocksCollectionViewCell.swift in Sources */,
+				F23814952B2BB67C00EB4DF4 /* Alert.swift in Sources */,
+				F23814602B2A449100EB4DF4 /* LocationTableViewCell.swift in Sources */,
 				F23814442B296B6100EB4DF4 /* StockData.swift in Sources */,
+				F238149F2B2BC1C900EB4DF4 /* AddressData.swift in Sources */,
 				F238143B2B28ACFD00EB4DF4 /* CollectionView.swift in Sources */,
 				F23814512B2A3AEB00EB4DF4 /* TableView.swift in Sources */,
 				F238141D2B2877D600EB4DF4 /* MainScreenView.swift in Sources */,
+				F23814972B2BB68300EB4DF4 /* InternetAvailability.swift in Sources */,
 				F238144D2B2A34F200EB4DF4 /* MenuDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +550,7 @@
 				DEVELOPMENT_TEAM = 9MHYTDB9DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeliveryTest;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -458,7 +559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = evoroncova.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -480,6 +581,7 @@
 				DEVELOPMENT_TEAM = 9MHYTDB9DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeliveryTest;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -488,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = evoroncova.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -532,6 +634,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		F23814632B2A4EE000EB4DF4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -544,6 +654,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F23814272B2878E200EB4DF4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		F23814642B2A4EE000EB4DF4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F23814632B2A4EE000EB4DF4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

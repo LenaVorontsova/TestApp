@@ -72,6 +72,8 @@ final class MainScreenViewController: UIViewController {
         
         self.setStocksData()
         
+        self.mainView.searchView.searchTextField.addDoneButton(title: "Готово", target: self, selector: #selector(tapDone))
+        
         self.mainView.promoSectionsCollectionView.delegate = self
         self.mainView.promoSectionsCollectionView.dataSource = self
         
@@ -83,6 +85,9 @@ final class MainScreenViewController: UIViewController {
         
         self.mainView.catalogCollectionView.delegate = self
         self.mainView.catalogCollectionView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func setStocksData() {
@@ -186,6 +191,25 @@ final class MainScreenViewController: UIViewController {
             cell.countLabel.text = "\(cell.count)"
         }
     }
+    
+    @objc
+    private func tapDone(sender: Any) {
+        self.mainView.endEditing(true)
+    }
+    
+    @objc
+    private func keyboardWillShow(_ notification: Notification) {
+        let userInfo = notification.userInfo
+        let keyboardSize = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        self.mainView.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height+10, right: 0)
+        self.mainView.scrollView.scrollIndicatorInsets = self.mainView.scrollView.contentInset
+    }
+    
+    @objc
+    private func keyboardWillHide(_ notification: Notification) {
+        self.mainView.scrollView.contentInset = UIEdgeInsets.zero
+        self.mainView.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+    }
 }
 
 extension MainScreenViewController: MainScreenDelegate {
@@ -195,8 +219,11 @@ extension MainScreenViewController: MainScreenDelegate {
         self.present(vc, animated: false)
     }
     
-    func moreButtonTapped(_ sender: UIButton) {
-        print("the cell in the promoSectionsCollectionView is pressed")
+    func searchAddressTapped(_ tapGesture: UITapGestureRecognizer) {
+        let vc = SearchViewController()
+        vc.delegate = self
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true)
     }
     
     func heartButtonTapped(_ sender: UIButton) {
@@ -206,7 +233,12 @@ extension MainScreenViewController: MainScreenDelegate {
     func showAllButtonTapped(_ sender: UIButton) {
         print("the showAll is pressed")
     }
+    
+    func changeLocation(location: String) {
+        self.mainView.addressLabel.text = location
+    }
 }
+
 
 extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
